@@ -1,0 +1,20 @@
+<div id="app"></div>
+
+<script>
+  // render function
+  function h(tag, props, children) {
+    return {
+      tag,
+      props,
+      children,
+    };
+  }
+
+  // mount function
+  function mount(vnode, container) {}
+
+  // 我们要假设tag,props,children调用顺序不能错，也就是即使没有，必须在这里显示地传递null
+  const vdom = h("div", { class: "red" }, [h("span"), null, ["hello"]]);
+
+  mount(vdom,document.getElementById('app'));
+</script>
